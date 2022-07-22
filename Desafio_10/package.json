@@ -1,0 +1,31 @@
+{
+  "name": "desafio_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classDB.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vscode/sqlite3": "^5.0.8",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "express-session": "^1.17.3",
+    "knex": "^1.0.7",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.3.1",
+    "nodemon": "^2.0.15"
+  }
+}

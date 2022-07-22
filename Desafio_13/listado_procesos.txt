@@ -1,0 +1,67 @@
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_12(master) (desafio_12@1.0.0)
+λ forever start index.js 
+warn:    --minUptime not set. Defaulting to: 1000ms
+warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+info:    Forever processing file: index.js
+(node:12652) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12652) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_12(master) (desafio_12@1.0.0)
+λ forever list
+(node:31092) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31092) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+info:    Forever processes running
+data:        uid  command                            script                                                                                                                                 forever pid   id logfile                             uptime
+data:    [0] JepX "C:\Program Files\nodejs\node.exe" C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_12\index.js 30036  
+ 37700    C:\Users\exa82457\.forever\JepX.log 0:0:0:39.929
+
+
+
+ C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>pm2 start index.js --name="Server1" --watch -- 8082
+[PM2] Starting C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13\index.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────┬────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name       │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0   │ Server1    │ default     │ 1.0.0   │ fork    │ 3872     │ 1s     │ 0    │ online    │ 17.3%    │ 43.1mb   │ CTI23659 │ enabled  │
+└─────┴────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>pm2 start index.js --name="Server2" --watch -i 1 -- 8083
+[PM2] Starting C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13\index.js in cluster_mode (1 instance)
+[PM2] Done.
+┌─────┬────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name       │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0   │ Server1    │ default     │ 1.0.0   │ fork    │ 3872     │ 14s    │ 0    │ online    │ 0%       │ 34.7mb   │ CTI23659 │ enabled  │
+│ 1   │ Server2    │ default     │ 1.0.0   │ cluster │ 3640     │ 1s     │ 0    │ online    │ 20.3%    │ 43.4mb   │ CTI23659 │ enabled  │
+└─────┴────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>pm2 start index.js --name="Server3" --watch -- 8084
+[PM2] Starting C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13\index.js in fork_mode (1 instance)
+[PM2] Done.
+┌─────┬────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name       │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0   │ Server1    │ default     │ 1.0.0   │ fork    │ 3872     │ 25s    │ 0    │ online    │ 0%       │ 34.9mb   │ CTI23659 │ enabled  │
+│ 1   │ Server2    │ default     │ 1.0.0   │ cluster │ 3640     │ 12s    │ 0    │ online    │ 0%       │ 35.1mb   │ CTI23659 │ enabled  │
+│ 2   │ Server3    │ default     │ 1.0.0   │ fork    │ 10956    │ 1s     │ 0    │ online    │ 17.1%    │ 42.8mb   │ CTI23659 │ enabled  │
+└─────┴────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>pm2 start index.js --name="Server2" --watch -i 1 -- 8085
+[PM2][ERROR] Script already launched, add -f option to force re-execution
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>pm2 start index.js --name="Server4" --watch -i 1 -- 8085
+[PM2] Starting C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13\index.js in cluster_mode (1 instance)
+[PM2] Done.
+┌─────┬────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name       │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0   │ Server1    │ default     │ 1.0.0   │ fork    │ 3872     │ 46s    │ 0    │ online    │ 0%       │ 35.2mb   │ CTI23659 │ enabled  │
+│ 1   │ Server2    │ default     │ 1.0.0   │ cluster │ 3640     │ 33s    │ 0    │ online    │ 0%       │ 35.4mb   │ CTI23659 │ enabled  │
+│ 2   │ Server3    │ default     │ 1.0.0   │ fork    │ 10956    │ 22s    │ 0    │ online    │ 0%       │ 34.8mb   │ CTI23659 │ enabled  │
+│ 3   │ Server4    │ default     │ 1.0.0   │ cluster │ 21112    │ 1s     │ 0    │ online    │ 0%       │ 43.1mb   │ CTI23659 │ enabled  │
+└─────┴────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\Users\exa82457\Documents\Documentos personales\Coderhouse\Desarrollador back end\Programacion_Back_end\Desafíos\Desafio_13>

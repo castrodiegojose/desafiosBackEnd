@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs');%>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Gatos-Random</title>
+</head>
+<h1>Tabla Random Gatos</h1>
+    <table id="tabla" cellspacing="0" cellpadding="50" border="3">
+        <thead>
+            <tr>
+                <th scope="col">Gato</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(catsRandom.length === 0) { %>
+                <tr>
+                    <td id ="no hay datos" colspan="3">No hay datos</td>
+                </tr> 
+                <% } else { %>
+                    <% for(let i = 0; i<catsRandom.length; i++) { %>
+                        <tr>
+                            <td align="center"><%=catsRandom[i].cat %></td>
+                            <td align="center"><%=catsRandom[i].name %></td>
+                            <td align="center">
+                                <img src="<%=catsRandom[i].foto%>" size="5" alt="5">
+                            </td>
+                        </tr>
+            <% }}%> 
+        </tbody>
+    </table>
+</html>
