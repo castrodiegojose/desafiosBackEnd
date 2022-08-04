@@ -54,10 +54,9 @@ export default class DaoProductos{
     }
 
     async save(prod){
-        console.log(prod)
         await knexMysql('productos').insert(prod)
-             .then(() =>{
-                console.log("producto guardado");
+             .then((resp) =>{
+                console.log("producto guardado:", resp);
             })
              .catch(err => {console.log(err); throw err})
     }
